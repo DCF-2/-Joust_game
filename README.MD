@@ -77,7 +77,7 @@ graph TD
 
 ## 🎓 Contexto do Projeto
 
-Este projeto foi desenvolvido como parte da avaliação da disciplina de **Desenvolvimento Web 2** do curso de **Tecnologia em Análise e Desenvolvimento de Sistemas** do Instituto Federal de Pernambuco (IFPE). O objetivo era construir um jogo inspirado no Countryle, consumindo uma API externa e implementando uma lógica de jogo complexa.
+Este projeto foi desenvolvido como parte da avaliação da disciplina de **Desenvolvimento Web 2** do curso de **Tecnologia em Análise e Desenvolvimento de Sistemas** do Instituto Federal de Pernambuco (IFPE). O objetivo era construir um jogo inspirado no Jouste de tabuleiro, implementando uma lógica de jogo complexa.
 
 ---
 
