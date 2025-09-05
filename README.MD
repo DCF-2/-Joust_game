@@ -6,6 +6,10 @@
 
 ---
 
+![Joust Game Screenshot](img/Joust.png)
+
+---
+
 ## 📄 Descrição do Projeto
 
 Joust é um jogo de estratégia e sobrevivência desenvolvido para a web, onde dois jogadores competem em um tabuleiro de xadrez como cavaleiros. O objetivo é ser o último cavaleiro com movimentos válidos. A cada turno, o cavaleiro deve se mover em L, como a peça do cavalo no xadrez, e a casa que ele deixa para trás é "queimada", tornando-se inutilizável pelo resto do jogo. O jogo termina quando um cavaleiro não tem mais movimentos disponíveis, e o outro jogador vence a partida.
