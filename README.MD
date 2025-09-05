@@ -13,7 +13,6 @@ Joust é um jogo de estratégia e sobrevivência desenvolvido para a web, onde d
 O jogo foi construído como um PWA (Progressive Web App), permitindo que ele seja instalado em dispositivos móveis e desktop para uma experiência de jogo offline e imersiva.
 
 ![Joust Game Screenshot](img/Captura%20de%20tela%202025-09-05%20103735.png)
-![Joust Game Logo](img/Joust.png)
 
 ---
 ## ✨ Funcionalidades
