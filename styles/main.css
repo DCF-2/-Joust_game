@@ -1,0 +1,153 @@
+/* --- styles/main.css --- */
+
+/* Estilo base para a página */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #2c3e50; /* Um fundo escuro */
+    color: #ecf0f1; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Evita barras de rolagem durante a animação */
+}
+
+/* Classe para esconder elementos */
+.escondido {
+    display: none !important; /* Usar !important para garantir que sobrescreva */
+}
+
+/* NOVO: Tela de Animação de Abertura */
+#tela-animacao {
+    position: fixed; /* Fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #34495e; /* Fundo ligeiramente diferente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+.cavalo-animado {
+    font-size: 10rem; /* Cavalos grandes para a animação */
+    position: absolute;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* Mantém o estado final da animação */
+}
+
+.cavalo-branco {
+    color: #ecf0f1;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    left: -150px; /* Começa fora da tela à esquerda */
+    animation-name: animarCavaloBranco;
+}
+
+.cavalo-preto {
+    color: #34495e; /* Mais escuro que o fundo para contraste */
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    right: -150px; /* Começa fora da tela à direita */
+    animation-name: animarCavaloPreto;
+}
+
+/* Keyframes para a animação dos cavalos */
+@keyframes animarCavaloBranco {
+    0% { transform: translateX(0); opacity: 0; }
+    20% { opacity: 1; }
+    80% { transform: translateX(calc(100vw - 300px)); opacity: 1; } /* Atravessa a tela */
+    100% { transform: translateX(calc(100vw - 150px)); opacity: 0; } /* Sai da tela */
+}
+
+@keyframes animarCavaloPreto {
+    0% { transform: translateX(0); opacity: 0; }
+    20% { opacity: 1; }
+    80% { transform: translateX(calc(-100vw + 300px)); opacity: 1; } /* Atravessa a tela */
+    100% { transform: translateX(calc(-100vw + 150px)); opacity: 0; } /* Sai da tela */
+}
+
+
+/* Container da tela de entrada */
+#tela-entrada {
+    /* NOVO: Começa escondida por JS, mas aqui garantimos que não interfire com a animação */
+    position: absolute; /* Para ficar por trás da animação */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; /* O display flex original já estava bom */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 999; /* Abaixo da animação */
+}
+
+#tela-entrada h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* Botão de Iniciar */
+#botao-iniciar {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botao-iniciar:hover {
+    background-color: #3498db;
+}
+
+/* Container principal do jogo */
+#container-jogo {
+    display: flex;
+    flex-direction: row; /* NOVO: Para alinhar o tabuleiro e o placar lado a lado */
+    align-items: center;
+    gap: 2rem; /* NOVO: Adiciona um espaçamento entre o tabuleiro e o placar */
+    /* NOVO: Também começa escondido e é revelado pelo JS */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998; /* Abaixo de tudo */
+}
+
+/* Campo de mensagem do jogo */
+#mensagem {
+    font-size: 1.5rem;
+    min-height: 2rem;
+}
+
+/* NOVO: Estilo para o container do placar */
+#placar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    border: 3px solid #1a252f;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #34495e;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#placar-container h3 {
+    margin: 0;
+}
+
+#placar-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}

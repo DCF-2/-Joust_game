@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joust</title>
+    <script defer type="module" src="js/main.js"></script>
+     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/board.css">
+    <link rel="manifest" href="conf/manifest.json">
+    <link rel="icon" href="img/Joust.webp">
+</head>
+<body>
+    <div id="tela-animacao">
+        <div class="cavalo-animado cavalo-branco">♘</div>
+        <div class="cavalo-animado cavalo-preto">♞</div>
+    </div>
+
+    <div id="tela-entrada" class="escondido">
+        <h1>Joust</h1>
+        <p>Um jogo de estratégia e sobrevivência no tabuleiro.</p>
+        <button id="botao-iniciar">Iniciar Jogo</button>
+    </div>
+
+    <div id="container-jogo" class="escondido">
+        <h2 id="mensagem"></h2>
+        <div id="board-wrapper">
+            <div id="col-labels">
+                <div>A</div><div>B</div><div>C</div><div>D</div><div>E</div><div>F</div><div>G</div><div>H</div>
+            </div>
+            <div id="row-labels">
+                <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div>
+            </div>
+            <div id="tabuleiro">
+                </div>
+        </div>
+        <div id="placar-container">
+            <h3>Placar</h3>
+            <p id="placar">Jogador 1: 0 -<br> Jogador 2: 0</p>
+        </div>
+    </div>
+</body>
+</html>
